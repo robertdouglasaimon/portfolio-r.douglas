@@ -195,7 +195,7 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color; }
 
-/*EFEITO NEON NA FOTO DE PERFIL--------------------------------------------------------------------------------*/
+/*EFEITO NEON NA FOTO DE PERFIL E NOS ELEMENTOS DO SITE--------------------------------------------------------*/
 .neon-effect {
   width: 200px; /* Tamanho da imagem */
   border-radius: 10px; /* Arredondamento das bordas, opcional */
@@ -219,7 +219,63 @@ button:focus {
     0 0 5px #ffc107; /* Aumenta a intensidade do brilho ao passar o mouse */
 }
 
+/*---------------------------------------------------------------------------------------------------------------*
+
+/*EFEITO NEON NA FOTO DO BANNER PERFIL E NOS ELEMENTOS DO SITE-------------------------------------------------*/
+
+.neon-photo-effect {
+  display: block; /* Garante que o elemento ocupe apenas o espaço da imagem */
+  width: auto; /* Ajuste conforme necessário */
+  margin: 0 auto; /* Centraliza a imagem */
+  position: relative; /* Permite o uso de pseudo-elementos */
+  filter: drop-shadow(0 0 5px rgba(255, 193, 7, 0.8))
+          drop-shadow(0 0 10px rgba(255, 193, 7, 0.6))
+          drop-shadow(0 0 20px rgba(255, 193, 7, 0.4));
+  animation: neonPulse 2s infinite; /* Aplica a animação contínua */
+}
+
+@keyframes neonPulse {
+  0% {
+      filter: drop-shadow(0 0 5px rgba(255, 193, 7, 0.8)) /* No início da animação, a sombra tem o mesmo efeito inicial. */
+              drop-shadow(0 0 10px rgba(255, 193, 7, 0.6)) /* As sombras são menos intensas comparadas com o estágio final. */
+              drop-shadow(0 0 20px rgba(255, 193, 7, 0.4));
+  }
+  50% {
+      filter: drop-shadow(0 0 5px rgba(255, 193, 7, 1)) /* No meio da animação, a sombra se intensifica com opacidade total (1). */
+              drop-shadow(0 0 10px rgba(255, 193, 7, 0.8)) /* As sombras se tornam mais visíveis. */
+              drop-shadow(0 0 20px rgba(255, 193, 7, 0.6));
+  }
+  100% {
+      filter: drop-shadow(0 0 5px rgba(255, 193, 7, 0.8)) /* No final da animação, o efeito retorna ao estado inicial. */
+              drop-shadow(0 0 10px rgba(255, 193, 7, 0.6))
+              drop-shadow(0 0 20px rgba(255, 193, 7, 0.4));
+  }
+}
+
 /*-------------------------------------------------------------------------------------------------------------*/
+/*ANIMAÇÃO DE CARREGAMENTO DAS BARRAS DE PROGRESSO DAS HABILIDADES---------------------------------------------*/
+
+.progress-bar-loading {
+  height: 100%;
+  background-color: #4caf50; /* Cor da barra de progresso */
+  width: 0; /* Começa com largura 0 para o efeito de carregamento */
+  border-radius: 5px;
+  position: relative;
+  animation: load 2s ease-out forwards; /* Animação que carrega a barra de progresso */
+}
+
+/* Animação para a barra de progresso */
+@keyframes load {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width, 100%); /* Usa o valor do custom property ou 100% se não definido */
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
 
 input,
 button,
