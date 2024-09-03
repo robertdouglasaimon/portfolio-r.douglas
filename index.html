@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Robert Douglas Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/animate.css">
+
+  <link rel="stylesheet" href="src/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="src/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="src/css/magnific-popup.css">
+
+  <link rel="stylesheet" href="src/css/aos.css">
+
+  <link rel="stylesheet" href="src/css/ionicons.min.css">
+
+  <link rel="stylesheet" href="src/css/flaticon.css">
+  <link rel="stylesheet" href="src/css/icomoon.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/efeitoDoCardProjetos.css">
+
+  <style>
+    .about-mf .box-shadow-full {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .about-mf .about-img {
+      margin-bottom: 2rem;
+    }
+
+    .about-mf .about-img img {
+      margin-left: 10px;
+    }
+
+    .skill-mf .progress {
+      /* background-color: #cde1f8; */
+      margin: 0.5rem 0 1.2rem;
+      border-radius: 0;
+      height: 0.7rem;
+    }
+
+    .skill-mf .progress .progress-bar {
+      height: 0.7rem;
+      background-color: #ffbd39;
+    }
+
+    /* Animation styles */
+    #typing-animation {
+      position: relative;
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s steps(20, end) infinite;
+    }
+
+    #typing-animation:before {
+      content: "";
+      /* position: absolute; */
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #ccc;
+      animation: typing-cursor 0.5s ease-in-out infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes typing-cursor {
+      from {
+        width: 5px;
+      }
+
+      to {
+        width: 0;
+      }
+    }
+
+    /* Efeito de zoom da imagem do projeto */
+
+    .zoom-effect {
+      overflow: hidden;
+      transition: transform 0.3s ease-out;
+    }
+
+    .zoom-effect:hover {
+      transform: scale(1.1);
+    }
+
+    @media screen and (orientation: portrait) {
+      body {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      .order-md-last {
+        visibility: hidden;
+      }
+
+      .about-img img {
+        content: url("images/me.png");
+      }
+    }
+  </style>
+<body>
+   </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Robert Douglas </a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span>
+          Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item">
+              <a href="#home-section" class="nav-link">
+                <span>Inicio</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-section" class="nav-link">
+                <span>Sobre mim</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#resume-section" class="nav-link">
+                <span>Resumo</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#project-section" class="nav-link">
+                <span>Projetos</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact-section" class="nav-link">
+                <span>Contato</span></a>
+            </li>   
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home-section" class="hero">
+      <div class="home-slider  owl-carousel">
+        <div class="slider-item ">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img-fluid w-50" style="background-image:url(src/images/SEPIA2.png); background-repeat: no-repeat; padding-left: 60px;">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Olá!</span>
+                  <h1 class="mb-4 mt-3">Me chamo
+                    <span>Robert Douglas</span></h1>
+
+                  <!-- Elemento do container animando a escrita -->
+                  <span id="typing-animation"></span>
+
+                  <script>
+                    // Inicializando a animação de escrever.
+                    const typingAnimationElement = document.getElementById('typing-animation');
+
+                    // Criando um array do texto que será escrito.
+                    const typingTexts = [ 'Técnico em TI  ', 'Desenvolvedor Web (Front-End)    ', 'Cientista de Dados   ',  'Téc.Logistica  ', 'Administrador   '];
+
+                    // Criando uma função para exibir a animação de digitação de um determinado texto.
+                    function playTypingAnimation(text) {
+                      // Percorra cada caractere e adicione-o ao elemento (Loop).
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 100); // Atraso reduzido para acelerar a animação de digitação.
+                      }
+
+                      // Assim que a animação estiver concluída, redefina o texto e recomece (Restarta a animação).
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 100); // Atraso ajustado de acordo com a vontade do proprietario.. Deixei assim mesmo, ta ok.
+                    }
+
+                    // Inicia o loop de animação de digitação.
+                    playTypingAnimation(typingTexts[0]);
+                  </script><br><br>
+
+                  <p>
+                    <a href="https://github.com/robertdouglasaimon"  target="_blank" class="btn btn-primary py-3 px-4">GitHub</a>
+                    <a href="https://www.linkedin.com/in/robertdouglas2000/"  target="_blank" class="btn btn-white btn-outline-white py-3 px-4">Meu Linkedin</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="row d-flex align-items-stretch">
+            <!-- <div class="row d-flex"> -->
+            <div class="col-md-6 col-lg-5 d-flex">
+              <div class="img-about img d-flex align-items-stretch">
+                <div class="overlay">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="../Portfolio-main/src/images/perfil1.jpg" class="img-fluid rounded b-shadow-a border border-white" alt="Foto de Perfil">
+                      </div>
+                    </div>
+                    <!-- Detalhes ao lado da imagem do perfil -->
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p>
+                          <span class="title-s">Nome:
+                          </span>
+                          <span>Robert Douglas De Sousa Feitosa</span>
+                        </p>
+
+                        <p>
+                          <span class="title-s">Profissão: Administrador</span>
+                        </p>
+
+                        <p>
+                          Cientista De Dados
+                        </p>
+
+                        <p>
+                          <span>Desenvolvedor Front-End</span>
+                        </p>
+                        
+                        <p>
+                          <span>Téc. em TI</span>
+                        </p>
+
+                        <p>
+                          <span>Téc.Logística</span></p>
+                        <p>
+                          <span class="title-s">Endereço:
+                          </span>
+                          <span>Rua 58 Quadra 73 Lote 32, 3º Etapa J. Céu Azul, Valparaiso De Goiás - GO 728710-58</span></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="skill-mf">
+                    <p class="title-s">Habilidades</p>
+                    <span>Front-End</span>
+                    <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Data Science</span>
+                    <span class="pull-right">5%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>HTML5/CSS3</span>
+                    <span class="pull-right">95%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>JavaScript</span>
+                    <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>TypeScript (Básico)</span>
+                    <span class="pull-right">100%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Bootstrap 4</span>
+                    <span class="pull-right">100%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Tailwind CSS</span>
+                    <span class="pull-right">10%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>React JS</span>
+                    <span class="pull-right">70%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Node JS</span>
+                    <span class="pull-right">10%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Python(Voltado a Dados)</span>
+                    <span class="pull-right">30%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>R</span>
+                    <span class="pull-right">0%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Power Bi</span>
+                    <span class="pull-right">10%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>MySQL</span>
+                    <span class="pull-right">0%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <span>SQL</span>
+                    <span class="pull-right">0%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+              <div class="row justify-content-start pb-3">
+                <div class="col-md-12 heading-section ftco-animate">
+
+                  <h1 class="big">Sobre mim</h1>
+                  <h2 class="mb-4">Sobre mim</h2>
+
+                  <br>
+
+                  
+                  <p>
+                    Um cara esportista maluco que sempre gostou de TI! Seja manutenção, restauração, analise de dados ou programação. 
+                  </p>
+                  <p>
+                    Meu primeiro contato com a tecnologia foi em 2006, quando estava pensando no ensino médio e em qual carreira seguir após ali. Apesar de ter gostado da área, só comecei de fato a investir e perceber que era aquilo que eu queria para a minha vida no final de 2022, quando despertei novamente o interesse na área e apartir dai, passei a dar o devido foco ao desenvolvimente web e recentemente após ser aprovado na UFG/EFG, o curso de Ciência De Dados. 
+                  </p>
+
+                  <ul class="about-info mt-4 px-md-0 px-2">
+                    <li class="d-flex">
+                      <span>Perfil:</span>
+                      <span>
+                        Profissional com sólida experiência na área de TI (Dev.Front-End/Data Science/Manutenção), Logística e Administração. Capaz de executar múltiplas tarefas, aumentando a eficiência da rotina operacional.
+                      </span>
+                    </li>
+                    
+                    <li class="d-flex">
+                      <span>Línguas:</span>
+                      <span>Português (pt-BR) &amp; Inglês (Médio)</span>
+                    </li>
+
+                    <li class="d-flex">
+                      <span>Outras Habilidades:</span>
+                        <span>
+                          <br>                       
+                          <p>
+                            Conhecimento em Manutenção Preventiva de Computadores e Notbooks (Montagem, limpeza e teste dos componentes internos), facilidade em manejar sistemas.
+                          </p>  
+
+                          <p>
+                            Experiência na área de Logística (Operar transpaleteira elétrica, manual e EGV/Abastecimento de picking por endereço padrão [rua.prédio.apartamento/locação]/Ressuprimento e organização no geral). 
+                          </p>
+
+                          <p>
+                            Na área Administrativa, destaque na área de arquivo organizando em ordem alfabética e cronologicamente os processos, conhecimento nas ferramentas do Microsoft Office 2010
+                          </p>
+
+                          <p>
+                            Na área de Design/Web design, habilidades com as ferramentas: Figma, Canvas, Photoscape e Gimp. Conhecimentos com básicos na ferramenta OBS (Templates e LiveStreams). Noção de Photoshop (CS6).
+                          </p>
+
+                          <p>
+                            Habilidades de observação, Criatividade, Proficiência técnica, Gerenciamento de tempo, Adaptabilidade e habilidade. Atenção aos detalhes.
+                          </p>
+
+                        </span>
+                       </li>
+
+                    <li class="d-flex">
+                      <span>Interesses:</span>
+                      <span>
+                        <p>
+                          Me aprofundar na Ciência De Dados, desenvolvendo relatórios e gráficos eficientes e significativos e me inserir na área efetivamente. Desenvolver mais as habilidades em desenvolvimento web, criar e desenvolver páginas dinâmicas, atualizadas, e quem sabe futuramente sistemas.
+                        </p>
+                        <p>
+                          Melhorar meu desempenho na área profissional de TI, viajar mais, participar mais de campeonatos relacionados aos esportes e hobbies que pratico (corrida, ciclismo, artes marciais, desenho e na música) e viver tranquilamente no geral.
+                        </p>
+                      </span>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!----------RESUMO----------------------------------------------------------------------------------------------->
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Resumo</h1>
+            <h2 class="mb-4">Resumo</h2>
+            <br>
+            <p>
+                Experiência na criação de páginas web responsivas e visualmente atraentes utilizando HTML5, CSS3, JavaScript, React.js e Bootstrap 4, com estudos em progresso em Tailwind CSS. Atualmente cursando Ciência de Dados, desenvolvendo habilidades em Python com foco em bibliotecas como Seaborn, Matplotlib, NumPy e Pandas. Em fase inicial de aprendizado em R e SQL, com conhecimentos básicos em Excel e noções de Power BI, que serão aprofundados ao longo da formação. Motivado para aplicar e expandir minhas habilidades em projetos de desenvolvimento web e análise de dados.
+            </p>
+          </div>
+        </div>
+<!--------------------------------------------------------------------------------------------------------------->
+
+<!----------EXPERIÊNCIA PROFISSIONAL/ESTÁGIO--------------------------------------------------------------------->
+        <div class="row">
+          <h1 class="big-4">Experiencia</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">08/2023 - 12/2023</span>
+              <h2>DVA Logística | Santa Maria, DF</h2>
+              <span class="position">Operador de Logística</span>
+            </div>
+            
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">09/2022 - 12/2022</span>
+              <h2>Lojas Americanas S/A CD | Santa Maria, DF</h2>
+              <span class="position">Operador de Logística I e II
+                (Quebra de contrato: Insolvência)</span>
+            </div>
+            
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">04/2021 - 06/2021</span>
+              <h2>BRScan Processamento de Dados e Tecnologia Ltda | Brasília, DF</h2>
+              <span class="position">Auxiliar Administrativo/Analista de Dados (Contrato)</span>
+            </div>
+            
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">01/2021 - 05/2021</span>
+              <h2>Priori Treinamento e Aperfeiçoamento | Brasília, DF</h2>
+              <span class="position">Auxiliar Administrativo/Web Design, Design Gráfico</span>
+            </div>
+            
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">06/2014 - 04/2015</span>
+              <h2>CALL TECNOLOGIA E SERVIÇOS LTDA/MEC ESPLANADA DOS MINISTÉRIOS | Brasília, DF</h2>
+              <span class="position">Auxiliar Administrativo/Web Design, Design Gráfico</span>
+            </div>
+            
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">11/2012 - 02/2013</span>
+              <h2>MAIA GAMA SUPERMERCADOS LTDA | Gama-DF, Brasília DF</h2>
+              <span class="position">Depósito / Repositor de Hortifrúit</span>
+            </div>
+            
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">07/2016  -  12/2016</span>
+              <h2>Delta Informática | Valparaiso, GO</h2>
+              <span class="position"><b>ESTÁGIO</b></span><br>
+              <span class="position">Técnico em Informatica</span>
+            </div>
+            
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">06/2016  -  12/2017</span>
+              <h2>Secretaria de Estado de Gestão de Território e Habitação (CIEE) | SCS - Brasília, DF</h2>
+              <span class="position"><b>ESTÁGIO</b></span><br>
+              <span class="position">Auxiliar Administrativo</span>
+            </div>
+            
+          </div>
+
+        </div>
+
+        <br>
+        <br>
+<!--------------------------------------------------------------------------------------------------------------->
+
+<!----------------FORMAÇÃO ACADEMICA----------------------------------------------------------------------------->
+        <div class="row">
+          <h1 class="big-4">Formação</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2013-2016</span>
+              <h2>Bacharel em Administração</h2>
+              <span class="position"> Faculdade Anhanguera De Valparaiso De Goiás</span>
+              <p class="mt-4">Goiás</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2023</span>
+              <h2>Técnico em Logística</h2>
+              <span class="position">UNOVA Cursos</span>
+              <p class="mt-4">Goiás</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2023-Em andamento...</span>
+              <h2>Desenvolvedor Web (Front-End)</h2>
+              <span class="position">Alura</span>
+              <p class="mt-4">São Paulo</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2024-Em andamento...</span>
+              <h2>Ciência de Dados</h2>
+              <span class="position">UFG/EFG</span>
+              <p class="mt-4">Goiás</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p>
+              <a href="../Portfolio-main/src/documents/- Robert Douglas GO - ATUALIZADO 24 07 2024 (RESUMIDO AO EXTREMO).pdf" class="btn btn-primary py-4 px-5">Download CV</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--------------------------------------------------------------------------------------------------------------->
+
+<!-----------------------------------------AREA DOS PROJETOS----------------------------------------------------->
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">     
+      <div class="row espacamento" id="project-section" >
+        <h1 class="big-4">Projetos</h1>
+        <div class="underline"></div>
+      </div>
+      <br>
+
+      <div class="row">
+<!------ITENS QUE FICAM A ESQUERDA DA TELA---------------------------------------------------------------->
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Projeto - Curso de Desenvolvimento com Python</h2>
+            <span class="position">(Noturno - EFG)</span>
+            <p class="mt-4"> Projeto criado para homenagear a turma do curso e guardar os conteúdos e afins desenvolvidos em sala.</p>
+
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://projeto-turma-de-desenvolvimento-python.vercel.app/index.html" target="_blank">
+                  <img src="src/images/projetos/projeto-curso-intro-python.png" alt="Projeto do Curso de Desenvolvimento com Python">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Projeto Page da Turma do Curso de Desenvolvimento com Python (Noturno - EFG)</p>
+                      <br>
+                      <p>Projeito feito usando HTML5, CSS3 e JavaScript</p>
+                      <p>🔗 Ver no GitHub Pages</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2023</span>
+            <h2>Projeto - Microsite</h2>
+            <span class="position">Projeto de autoria própria</span>
+            <p class="mt-4"> Um projeto criado para testar meu conhecimento até aquele momento. Um copilado de HTML5, CSS3 e JavaScript Iniciante, porém, funcional. </p>
+
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://robertdouglasaimon.github.io/projeto-microsite/" target="_blank">
+                  <img src="src/images/projetos/projeto-microsite.png" alt="Projeto Microsite feito em HTML5, CSS3 e JavaScript iniciante">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Projeto Microsite</p>
+                      <br>
+                      <p>Projeito feito usando HTML5, CSS3 e JavaScript iniciante</p>
+                      <p>🔗 Ver no GitHub Pages</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Desafio Frontend Mentor - Componente de QR Code</h2>
+            <span class="position">Desafio do Frontend Mentor</span>
+            <p class="mt-4">Este é o meu projeto para o desafio do Frontend Mentor de construção de um componente de QR code. Desenvolvi este componente para ficar o mais próximo possível do design fornecido. </p>
+
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://robertdouglasaimon.github.io/Frontend-Mentor/Desafios/D1/index.html" target="_blank">
+                  <img src="src/images/projetos/Desafio QR Code Frontend Mentor.png" alt="Desafio QR Code do Frontend Mentor feito em HTML5 e CSS3">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Desafio QR Code</p>
+                      <br>
+                      <p>Este projeto foi desenvolvido utilizando HTML5 e CSS3.</p>
+                      <p>🔗 Ver no GitHub Pages</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Desafio Frontend Mentor - Cartão de receitas</h2>
+            <span class="position">Desafio do Frontend Mentor</span>
+            <p class="mt-4">Este é o meu projeto para o desafio do Frontend Mentor de construção de uma página de receitas. Desenvolvi este componente para ficar o mais próximo possível do design fornecido. </p>
+
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://robertdouglasaimon.github.io/Frontend-Mentor/Desafios/D3/index.html" target="_blank">
+                  <img src="src/images/projetos/Desafio Cartão De Receitas Frontend Mentor.png" alt="Desafio Cartão De Receitas do Frontend Mentor feito em HTML5 e CSS3">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Desafio Cartão de Receitas</p>
+                      <p>Este projeto foi desenvolvido utilizando HTML5 e CSS3.</p>
+                      <p>🔗 Ver no GitHub Pages</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Desafio Frontend Mentor - Cartão De Visualização Do Produto</h2>
+            <span class="position">Desafio do Frontend Mentor</span>
+            <p class="mt-4">Este é o meu projeto para o desafio do Frontend Mentor de uma perfil de direcionamento para redes sociais. Desenvolvi este componente para ficar o mais próximo possível do design fornecido. </p>
+
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://robertdouglasaimon.github.io/Frontend-Mentor/Desafios/D5/index.html" target="_blank">
+                  <img src="src/images/projetos/Desafio Cartão De Visualização Do Produto.png" alt="Desafio Cartão De Visualização Do Produto Frontend Mentor feito em HTML5 e CSS3">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Desafio Cartão De Visualização Do Produto</p>
+                      <br>
+                      <p>Este projeto foi desenvolvido utilizando HTML5 e CSS3.</p>
+                      <p>🔗 Ver no GitHub Pages</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+<!----------ITENS QUE FICAM A DIREITA DA TELA--------------------------------------------------------------->
+        <div class="col-md-6">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Projeto - Fokus</h2>
+            <span class="position">Atividade prática ministrada pela Alura para prática do DOM. </span>
+            <p class="mt-4">Fokus é uma aplicação estilo Pomodoro criada para ajudar a manter o foco durante os estudos, combinando um temporizador, uma trilha sonora relaxante e uma lista de tarefas interativas. </p>
+
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://p-fokus.vercel.app" target="_blank">
+                  <img src="src/images/projetos/projeto fokus.png" alt="Projeto Fokus (Alura)">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Projeto Fokus (Alura)</p>
+                      <br>
+                      <p>Projeito feito usando HTML, CSS, Javascript</p>
+                      <p>🔗 Ver no Vercel</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Projeto - Cordel</h2>
+            <span class="position">Atividade prática ministrada pelo CursoEmVideo. </span>
+            <p class="mt-4">Ao longo deste projeto, aprimorei minhas habilidades em várias técnicas-chave, incluindo o gerenciamento responsivo do tamanho da tela, posicionamento de elementos utilizando unidades de viewport (vh, vw), e, mais importante, a implementação bem-sucedida do efeito parallax.</p>
+            
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://robertdouglasaimon.github.io/PROJETO-CORDEL/" target="_blank">
+                  <img src="src/images/projetos/projeto-cordel.png" alt="Projeto do Curso de HTML5 e CSS3 do CursoEmVideo">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Projeto - Cordel</p>
+                      <br>
+                      <p>Projeito feito usando HTML5 e CSS3 do CursoEmVideo</p>
+                      <p>🔗 Ver no GitHub Pages</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Desafio Frontend Mentor - Cartão de visualização de blog</h2>
+            <span class="position">Desafio do Frontend Mentor</span>
+            <p class="mt-4">Este projeto foi desenvolvido utilizando HTML e CSS. O Cartão de visualização de blog exibe um cartão de visualização de postagem fictício e algumas informações relacionadas.</p>
+            
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://robertdouglasaimon.github.io/Frontend-Mentor/Desafios/D2/index.html" target="_blank">
+                  <img src="src/images/projetos/Desafio Cartão De Visitas Frontend Mentor.png" alt="Desafio Cartão de visualização de blog Frontend Mentor">
+                  <div class="informacoes-projeto">
+                     <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Desafio Cartão de visualização de blog</p>
+                      <br>
+                      <p>Projeito feito usando HTML5 e CSS3</p>
+                      <p>🔗 Ver no GitHub Pages</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Desafio Frontend Mentor - Cartão Perfil de Midias Sociais</h2>
+            <span class="position">Desafio do Frontend Mentor</span>
+            <p class="mt-4">Este projeto foi desenvolvido utilizando HTML e CSS. O Cartão Perfil de Midias Sociais exibe um cartão contendo links de direcionamento para determinadas redes sociais.</p>
+            
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://robertdouglasaimon.github.io/Frontend-Mentor/Desafios/D4/index.html" target="_blank">
+                  <img src="src/images/projetos/Desafio Perfil De Direcionamento Frontend Mentor.png" alt="Desafio Frontend Mentor - Cartão Perfil de Midias Sociais">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Desafio Cartão Perfil de Midias Sociais</p>
+                      <br>
+                      <p>Projeito feito usando HTML5 e CSS3</p>
+                      <p>🔗 Ver no GitHub Pages</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2024</span>
+            <h2>Projeto - Organo</h2>
+            <span class="position">ATIVIDADE PRÁTICA MINISTRADA PELA ALURA PARA PRÁTICA COM COMPONENTES NO REACTJS.</span>
+            <p class="mt-4">O Organo tem como objetivo criar um site/aplicação para criar e gerenciar times, sejam eles de estudos, de trabalho, de jogos, enfim. Atividade focada em práticar a criação e reutilização de componentes, refatoração de código e componentes funcionais.</p>
+            
+            <div class="container-projetos">
+              <div class="projeto  ativo">
+                <a href="https://organo-rdouglas-alura.vercel.app" target="_blank">
+                  <img src="src/images/projetos/Projeto Organo - Alura.png" alt="Projeto Organo - Alura">
+                  <div class="informacoes-projeto">
+                      <p>Desenvolvimento Web (Front-End)</p>
+                      <p>Projeto Organo - Alura</p>
+                      <br>
+                      <p>Projeito feito usando JavaScript e ReactJS</p>
+                      <p>🔗 Ver no Versel</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+<!-----------CONTADOR DE PROJETOS-------------------------------------------------------------------------------->
+
+<div class="hid" style="visibility:hidden">
+  <div class="container">
+    <div class="row d-md-flex align-items-center">
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="10">10</strong>
+            <span>Projetos Concluídos</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="6">6</strong>
+            <span>Projetos em Desenvolvimento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--------------------------------------------------------------------------------------------------------------->
+     
+<div class="row justify-content-center mt-5 espacamento">
+
+      </div>
+    </div>
+
+      <div class="ftco-section ftco-hireme img margin-top">
+  
+        <div class="row justify-content-center">
+          
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>Você pode me encontrar no
+              <span>
+                <a href="https://wa.me/+5561984625920?" target="_blank">
+                  <button id="gitbtn" class="btn btn-primary py-3 px-5">WhatsApp</button>
+                </a>
+              </span>
+            </h2>
+          
+            <div class="heading">
+              <h4>
+                Adoro programar e criar projetos incríveis. Estou sempre aberto a novas ideias e colaborações!
+              </h4>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contato</h1>
+            <h2 class="mb-4 ">Contato</h2>
+            <p>Abaixo estão os detalhes para entrar em contato comigo!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Endereço</h3>
+              <a href="https://maps.app.goo.gl/sH9ri2GHrSUXkmPw9" target="_blank">
+                <p>Robert Douglas</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Número para contato</h3>
+              <p>
+                <a href="https://wa.me/+5561984625920?" target="_blank">+55 (61)98462-5920</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Endereço de email</h3>
+              <p>
+                <a href="mailto:robertdouglasaimon@gmail.com" target="_blank">robertdouglasaimon@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Download Resumo</h3>
+              <p>
+                  <a href="../Portfolio-main//src/documents/- Robert Douglas GO - ATUALIZADO 24 07 2024 (RESUMIDO AO EXTREMO).pdf" download="Dowload do CV de Robert" class="LinkDowload" target="_blank" class="text-center">Clique aqui para baixar o documento padrão.         
+                  </a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="rodape">
+        <div>
+            <a href="https://github.com/robertdouglasaimon" target="_blank">
+              <p>Robert Douglas ©  2024</p>
+            </a>
+        </div>
+      </footer>
+
+      <script src="src/js/jquery.min.js"></script>
+      <script src="src/js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="src/js/popper.min.js"></script>
+      <script src="src/js/bootstrap.min.js"></script>
+      <script src="src/js/jquery.easing.1.3.js"></script>
+      <script src="src/js/jquery.waypoints.min.js"></script>
+      <script src="src/js/jquery.stellar.min.js"></script>
+      <script src="src/js/owl.carousel.min.js"></script>
+      <script src="src/js/jquery.magnific-popup.min.js"></script>
+      <script src="src/js/aos.js"></script>
+      <script src="src/js/jquery.animateNumber.min.js"></script>
+      <script src="src/js/scrollax.min.js"></script>
+
+      <script src="src/js/main.js"></script>
+    </body>
+
+</body>
+</html>
