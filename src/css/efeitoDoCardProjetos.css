@@ -1,0 +1,50 @@
+/*------PROJETOS-FRONT--------------------------------------*/
+.container-projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+    width: 235px;
+    height:auto;
+    text-align: center !important;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+.projetos {  
+    padding: 40px 0 40px;
+}
+
+.projeto.ativo{
+    display: block;
+}
+
+.projeto img {
+    
+    border-radius: 10px;
+    width: 235px;
+    height: 395px;
+}
+
+.projeto .informacoes-projeto {
+    background-color: #040203;
+    position: absolute;
+    top:0;
+    width: 235px;
+    height: 438px;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding-right: 4px;
+    text-align: center;
+    margin-top: 18.4rem;
+    border-radius: 10px;
+}
+
+.container-projetos .projeto:hover .informacoes-projeto{
+    opacity: 0.8;
+    background-color: #000;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
