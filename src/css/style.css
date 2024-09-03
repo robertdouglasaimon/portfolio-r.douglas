@@ -195,6 +195,32 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color; }
 
+/*EFEITO NEON NA FOTO DE PERFIL--------------------------------------------------------------------------------*/
+.neon-effect {
+  width: 200px; /* Tamanho da imagem */
+  border-radius: 10px; /* Arredondamento das bordas, opcional */
+  box-shadow: 
+    0 0 5px #f8f9fa,    /* Luz suave de brilho */
+    0 0 5px #f8f9fa,    /* Luz intermediária de brilho */
+    0 0 5px #f8f9fa,    /* Luz mais forte de brilho */
+    0 0 15px #f8f9fa,    /* Luz neon mais intensa */
+    0 0 20px #f8f9fa,    /* Expansão do brilho neon */
+    0 0 5px #f8f9fa;    /* Intensidade final do brilho */
+  transition: box-shadow 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.neon-effect:hover {
+  box-shadow: 
+    0 0 5px #ffc107, 
+    0 0 5px #ffc107, 
+    0 0 5px #ffc107, 
+    0 0 15px #ffc107, 
+    0 0 20px #ffc107, 
+    0 0 5px #ffc107; /* Aumenta a intensidade do brilho ao passar o mouse */
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
 input,
 button,
 select,
