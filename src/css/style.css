@@ -3724,6 +3724,25 @@ input[type="button"].btn-block {
     .navbar-expand-lg .navbar-toggler {
       display: none; } }
 
+.fotoPq {
+  display: none !important;
+}
+
+@media (max-width: 1080px) {
+  .about-img #foto1 {
+    display: none !important;
+  }
+
+  #foto2 .fotoPq {
+    max-width: 575px !important;
+    min-width: 575px !important;
+    max-height: 1074px !important;
+    min-height: 1074px !important;
+    width: auto !important;
+    height: auto !important
+  }
+}
+
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid {
