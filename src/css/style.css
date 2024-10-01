@@ -3724,6 +3724,37 @@ input[type="button"].btn-block {
     .navbar-expand-lg .navbar-toggler {
       display: none; } }
 
+
+
+      
+@media (max-width: 1080px) {
+  .about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #foto1 {
+    display: none !important;
+  }
+
+  #foto2 {
+    display: block !important; /* Garante que a imagem apareça */
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
+    margin: 0px 40px 30px 0px !important;
+    object-fit: cover !important;
+    overflow: hidden !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+    border: 2px solid white !important;
+    visibility: visible !important; /* Garante que a imagem seja visível */
+    opacity: 1 !important; /* Garante que a imagem esteja totalmente opaca */
+  }
+}
+
+
+
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid {
