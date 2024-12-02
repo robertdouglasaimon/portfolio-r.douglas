@@ -311,6 +311,62 @@ function aplicarEstilos() {
   window.addEventListener('resize', aplicarEstilos);
   
   
-  
 /*------------------------------------------------------------------------------*/
 
+//JS que obriga o fechamento do modal ao pressionar a tecla ESC
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      var modals = document.querySelectorAll('.modal');
+      modals.forEach(function(modal) {
+        var modalInstance = bootstrap.Modal.getInstance(modal);
+        if (modalInstance) {
+          modalInstance.hide();
+        }
+      });
+    }
+  });
+
+
+  // Definindo o z-index dos modais
+  document.addEventListener('shown.bs.modal', function (event) {
+	var modal = event.target;
+	modal.style.zIndex = '1055'; // Valor alto para garantir que fique acima dos outros elementos
+  });
+  
+  document.addEventListener('hidden.bs.modal', function (event) {
+	var modal = event.target;
+	modal.style.zIndex = ''; // Resetar o z-index após o fechamento
+  });
+  
+  document.addEventListener('keydown', function(event) {
+	if (event.key === 'Escape') {
+	  var modals = document.querySelectorAll('.modal');
+	  modals.forEach(function(modal) {
+		var modalInstance = bootstrap.Modal.getInstance(modal);
+		if (modalInstance) {
+		  modalInstance.hide();
+		}
+	  });
+	}
+  });
+  
+/*---CODIGO PARA O VIDEO NO MODAL DE VIDEO DE LOGISTICA---------------------------------------------------------*/
+	document.addEventListener('shown.bs.modal', function (event) {
+	var modal = event.target;
+	if (modal.id === 'modal6') {
+		var video = document.getElementById('portfolioVideo');
+		video.muted = false;
+		video.play(); // Inicia a reprodução do vídeo
+	}
+	});
+
+	document.addEventListener('hidden.bs.modal', function (event) {
+	var modal = event.target;
+	if (modal.id === 'modal6') {
+		var video = document.getElementById('portfolioVideo');
+		video.muted = true;
+		video.pause(); // Pausa o vídeo quando o modal é fechado
+	}
+	});
+/*----------------------------------------------------------------------------------------------------------------*/
+  
