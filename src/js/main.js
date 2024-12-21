@@ -308,7 +308,8 @@ function aplicarEstilos() {
   
   // Aplica estilos na inicialização e ao redimensionar a janela
   aplicarEstilos();
-  window.addEventListener('resize', aplicarEstilos);
+  document.addEventListener('DOMContentLoaded',  aplicarEstilos);
+  window.addEventListener('resize',  aplicarEstilos);
   
   
 /*------------------------------------------------------------------------------*/
