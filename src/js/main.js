@@ -274,6 +274,8 @@
 
 /*------------------------------------------------------------------------------*/
 // Função para aplicar estilos com base na largura da tela
+
+
 function aplicarEstilos() {
 	const foto1 = document.getElementById('foto1');
 	const foto2 = document.getElementById('foto2');
@@ -289,8 +291,8 @@ function aplicarEstilos() {
 	  foto2.style.height = '150px';
 	  foto2.style.borderRadius = '50%';
 	  foto2.style.objectFit = 'cover';
-	  foto2.style.overflow = 'hidden';
-	  foto2.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.1)';
+	  foto2.style.overflow = 'hidden !important';
+	  foto2.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.1) ';
 	  foto2.style.border = '2px solid white';
   
 	  // Centraliza a imagem na div
