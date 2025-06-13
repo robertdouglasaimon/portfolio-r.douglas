@@ -48,3 +48,59 @@
 }
 
 /*-------------------------------------------------------------------------------------------------------------*/
+
+/*--- MODIFICADOR DO TAMANHO DOS ICONES DA AREA CONHECIMENTOS APRENDIDOS--------------------------------------*/
+.icon-grid i {
+    font-size: 54px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+  
+  .icon-grid i:hover {
+    transform: scale(1.1);
+  }
+
+  .icon-grid i {
+    display: inline-block; /* para garantir que transform funcione */
+    font-size: 64px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+  
+  
+  .custom-icon {
+    height: 54px;
+    width: auto;
+    margin: 6px;
+    transition: transform 0.2s ease;
+  }
+  
+  .custom-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .devicon-streamlit-original {
+    color: white; /* deixa branco */
+  }
+
+  /* Deixando responsivo os icones no modo mobile =D*/
+  @media (max-width: 768px) {
+    .icon-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* ← centraliza o conteúdo */
+      align-items: center;
+      gap: 12px;
+      padding: 0 12px; /* espaço nas bordas */
+      text-align: center;
+    }
+  
+    .icon-grid i,
+    .icon-grid .custom-icon {
+      font-size: 40px;
+      height: 40px;
+      margin: 4px;
+    }
+  }
+  
+  
