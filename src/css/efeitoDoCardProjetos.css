@@ -107,5 +107,5 @@
 
 /* Estilo para o fundo do modal*/
 .modal-backdrop.show {
-  background-color: rgba(0, 0, 0, 0.3); /* valor padrão: 0.5 */
+  background-color: rgba(0, 0, 0, 0.4); /* valor padrão: 0.5 */
 }
