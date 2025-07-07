@@ -372,4 +372,15 @@ function aplicarEstilos() {
 	}
 	});
 /*----------------------------------------------------------------------------------------------------------------*/
-  
+
+/* CERTIFICADOS -- 🧠 JavaScript para alternar o botão e mostrar/ocultar --------------------*/
+  const btnToggle = document.getElementById('toggle-certificados');
+  const secaoCompleta = document.getElementById('certificados-completos');
+
+  btnToggle.addEventListener('click', () => {
+    secaoCompleta.classList.toggle('d-none');
+    btnToggle.textContent = secaoCompleta.classList.contains('d-none')
+      ? 'Clique aqui para ver todos'
+      : 'Clique para ocultar';
+  });
+  /*----------------------------------------------------------------------------------------------------------------*/
