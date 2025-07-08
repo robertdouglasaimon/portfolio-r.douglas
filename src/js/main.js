@@ -383,28 +383,33 @@ function mostrarCertificado(thumbnail, caminhoFrente, caminhoVerso) {
   const areaVisualizacao = document.getElementById(idVisualizacao);
   if (!areaVisualizacao) return;
 
+  areaVisualizacao.innerHTML = '';
   areaVisualizacao.style.position = 'relative';
 
-  // Se já tem certificado, vira ao invés de recriar
-  const existente = areaVisualizacao.querySelector('.certificado-flip');
-  if (existente) {
-    existente.classList.toggle('virado');
-    return;
-  }
+  // 🧠 Extrai a pasta do módulo (ex: data-science/R para Data Science)
+  const partes = caminhoFrente.split('/');
+  const pastaModulo = partes.slice(3, -1).join('/');
 
-  // Criação do certificado ampliado
+  // 📌 Extrai o número do certificado (ex: "1" de "1.png")
+  const nomeImagem = partes.at(-1); // "1.png"
+  const numeroCertificado = nomeImagem.split('.')[0]; // "1"
+
+  // ✅ Corrigido: nome do curso (ex: "R para Data Science")
+  const nomeCurso = partes[4];
+  const nomePDF = `${numeroCertificado}.Curso ${nomeCurso}(doc).pdf`;
+  const caminhoPDF = `src/images/miniaturas-e-certificados/${pastaModulo}/${nomePDF}`;
+
+  // 🔁 Criação do certificado ampliado
   const container = document.createElement('div');
   container.className = 'certificado-flip mt-4';
 
   const frente = document.createElement('img');
   frente.src = caminhoFrente;
   frente.className = 'img-fluid frente';
-  frente.alt = 'Certificado frente';
 
   const verso = document.createElement('img');
   verso.src = caminhoVerso;
   verso.className = 'img-fluid verso';
-  verso.alt = 'Certificado verso';
 
   container.appendChild(frente);
   container.appendChild(verso);
@@ -415,7 +420,7 @@ function mostrarCertificado(thumbnail, caminhoFrente, caminhoVerso) {
     container.classList.toggle('virado');
   });
 
-  // Botão de fechar
+  // ❌ Botão de fechar
   const fecharBtn = document.createElement('button');
   fecharBtn.innerHTML = '×';
   fecharBtn.className = 'fechar-certificado';
@@ -423,13 +428,24 @@ function mostrarCertificado(thumbnail, caminhoFrente, caminhoVerso) {
     e.stopPropagation();
     container.remove();
     fecharBtn.remove();
+    downloadBtn.remove();
   };
 
-  areaVisualizacao.innerHTML = ''; // limpa antes de inserir
+  // ⬇️ Botão de download do DOC institucional
+  const downloadBtn = document.createElement('a');
+  downloadBtn.href = caminhoPDF;
+  downloadBtn.className = 'download-certificado';
+  downloadBtn.textContent = '⬇️ Baixar Documento Oficial';
+  downloadBtn.setAttribute('download', nomePDF);
+  downloadBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // 📥 Insere tudo no DOM
   areaVisualizacao.appendChild(container);
   areaVisualizacao.appendChild(fecharBtn);
+  areaVisualizacao.appendChild(downloadBtn);
 }
-
 
 
 /*----------------------------------------------------------------------------------------------------------------*/

@@ -94,6 +94,13 @@
 }
 
 /*------- CERTIFICADOS E MODAIS DE CERTIFICADOS -----------------------------*/
+
+
+.descricao-miniatura-certificado {
+  font-size: small;
+  text-align: center;
+}
+
 .certificado-thumb {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -189,6 +196,32 @@ button {
   cursor: pointer;
   z-index: 1100;
 }
+
+
+/* Botão de download do certificado técnico----*/
+.download-certificado {
+  position: absolute;
+  bottom: 20px;
+  right: 24px; /* ajusta a distância exata conforme marcado */
+  background-color: #0d6efd;
+  color: white;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  z-index: 1100;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+.download-certificado:hover {
+  background-color: #0b5ed7;
+}
+
+
+/*----------------------------------------------*/
+
+
 /*----------------------*/
 
 
