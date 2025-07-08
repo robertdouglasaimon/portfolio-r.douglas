@@ -996,115 +996,95 @@
       </div>
     </div>
 
-    <!----CERTIFICADOS------------------------------------------------------------------>
+    <!-- CERTIFICADOS ----------------------------------------------------------------------->
+    <!-- CERTIFICADOS POR TECNOLOGIA -->
     <div class="row espacamento">
-        <h1 class="big-4" id="certificate-section">Certificados</h1>
-        <div class="underline"></div>
-      </div>
-      <div class="col-md-12 heading-section text-center ftco-animate">
-        <h3>Sessão destinada aos certificados que obtive ao longo da minha formação e atuação na área de tecnologia.</h3>
-
-      </div>
-
-      <!-- Miniaturas principais -->
-      <div class="row justify-content-center mt-4" id="certificados-iniciais">
-        <!-- Exemplo de certificado, Certificado 1-->
-        <div class="col-md-3 mb-4">
-          <img src="src/images/miniaturas-e-certificados/1.png" class="img-thumbnail certificado-thumb" alt="Certificado 1" data-bs-toggle="modal" data-bs-target="#modal-cert1">
-        </div>
-        <!-- Certificado 2 -->
-        <div class="col-md-3 mb-4">
-          <img src="src/images/miniaturas-e-certificados/2.png" class="img-thumbnail certificado-thumb" alt="Certificado 2" data-bs-toggle="modal" data-bs-target="#modal-cert2">
-        </div>
-
-        <!-- Certificado 3 -->
-        <div class="col-md-3 mb-4">
-          <img src="src/images/miniaturas-e-certificados/3.png" class="img-thumbnail certificado-thumb" alt="Certificado 3" data-bs-toggle="modal" data-bs-target="#modal-cert3">
-        </div>
-
-        <!-- Certificado 4 -->
-        <div class="col-md-3 mb-4">
-          <img src="src/images/miniaturas-e-certificados/4.png" class="img-thumbnail certificado-thumb" alt="Certificado 4" data-bs-toggle="modal" data-bs-target="#modal-cert4">
-        </div>
-
-        <!-- Repita para 4 certificados -->
-        <!-- ... -->
-      </div>
-
-      <!-- Botão para expandir -->
-      <div class="text-center mt-4">
-        <button id="toggle-certificados" class="btn btn-outline-warning">Clique aqui para ver todos</button>
-      </div>
-
-      <!-- Lista completa oculta inicialmente -->
-      <div class="row justify-content-center mt-4 d-none" id="certificados-completos">
-        <!-- Adicione os demais certificados aqui -->
-        <!-- Exemplo -->
-        <div class="col-md-3 mb-4">
-          <img src="src/images/miniaturas-e-certificados/5.png" class="img-thumbnail certificado-thumb" alt="Certificado 5" data-bs-toggle="modal" data-bs-target="#modal-cert5">
-        </div>
-        <!-- ... -->
-      </div>
-
-      <!-- Modals dos certificados -->
-      <!-- Exemplo de modal - Certificado 1 -->
-      <div class="modal fade" id="modal-cert1" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content bg-dark">
-            <div class="modal-body text-center">
-              <img src="./src/images/miniaturas-e-certificados/1.png" class="img-fluid" alt="Certificado 1">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Exemplo de modal - Certificado 2 -->
-      <div class="modal fade" id="modal-cert2" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content bg-dark">
-            <div class="modal-body text-center">
-              <img src="./src/images/miniaturas-e-certificados/2.png" class="img-fluid" alt="Certificado 2">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Exemplo de modal - Certificado 3 -->
-      <div class="modal fade" id="modal-cert3" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content bg-dark">
-            <div class="modal-body text-center">
-              <img src="./src/images/miniaturas-e-certificados/3.png" class="img-fluid" alt="Certificado 3">
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Exemplo de modal - Certificado 4 -->
-      <div class="modal fade" id="modal-cert4" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content bg-dark">
-            <div class="modal-body text-center">
-              <img src="./src/images/miniaturas-e-certificados/4.png" class="img-fluid" alt="Certificado 4">
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Exemplo de modal - Certificado 5 -->
-      <div class="modal fade" id="modal-cert5" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content bg-dark">
-            <div class="modal-body text-center">
-              <img src="./src/images/miniaturas-e-certificados/5.png" class="img-fluid" alt="Certificado 5">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Repita os modals para os outros certificados -->
-    
+      <h1 class="big-4" id="certificate-section">Certificados</h1>
+      <div class="underline"></div>
     </div>
+
+    <div class="col-md-12 heading-section text-center ftco-animate">
+      <h3>Sessão destinada aos certificados que obtive ao longo da minha formação e atuação na área de tecnologia.</h3>
+    </div>
+
+    <!-- Miniaturas de categorias -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-3 mb-4 text-center">
+        <img src="src/images/miniaturas-e-certificados/data-science/Data Science.png" class="img-thumbnail certificado-thumb" alt="Data Science" data-bs-toggle="modal" data-bs-target="#modal-data-science">
+        <p class="mt-2">Data Science</p>
+      </div>
+
+      <div class="col-md-3 mb-4 text-center">
+        <img src="src/images/miniaturas-e-certificados/dev-web-front/Front-End.png" class="img-thumbnail certificado-thumb" alt="Front-End" data-bs-toggle="modal" data-bs-target="#modal-front-end">
+        <p class="mt-2">Front-End</p>
+      </div>
+
+      <div class="col-md-3 mb-4 text-center">
+        <img src="src/images/miniaturas-e-certificados/dev-web-back/Back-End.png" class="img-thumbnail certificado-thumb" alt="Back-End" data-bs-toggle="modal" data-bs-target="#modal-back-end">
+        <p class="mt-2">Back-End</p>
+      </div>
+    </div>
+
+    <!-- Modal por Categoria -->
+    <!-- 🧪 Data Science -->
+    <div class="modal fade" id="modal-data-science" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-4">
+          <h3 class="mb-4">Certificados - Data Science</h3>
+          <div class="row justify-content-center mb-3">
+
+            <!-- Certificado 1 -->
+            <div class="col-md-3 mb-4">
+              <img src="src/images/miniaturas-e-certificados/data-science/Python para Data Science/1.png" class="img-thumbnail certificado-thumb"
+                  onclick="mostrarCertificado(this, 
+                  'src/images/miniaturas-e-certificados/data-science/Python para Data Science/1.png', 
+                  'src/images/miniaturas-e-certificados/data-science/Python para Data Science/1-back.png'
+                  )"
+                  alt="Certificado 1">
+            </div>
+            <!-- Insira mais certificados aqui -->
+          </div>
+          <div id="visualizacao-data-science" class="text-center"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖥️ Front-End -->
+    <div class="modal fade" id="modal-front-end" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-4">
+          <h3 class="mb-4">Certificados - Front-End</h3>
+          <div class="row justify-content-center mb-3">
+            <div class="col-md-3 mb-4">
+              <img src="src/images/miniaturas-e-certificados/dev-web-front/Explore React com JavaScript/1.png" class="img-thumbnail certificado-thumb"
+                  onclick="mostrarCertificado(this, 
+                  'src/images/miniaturas-e-certificados/dev-web-front/Explore React com JavaScript/1.png', 
+                  'src/images/miniaturas-e-certificados/dev-web-front/Explore React com JavaScript/1-back.png')"
+                  alt="Front-End Certificado 1">
+            </div>
+          </div>
+          <div id="visualizacao-front-end" class="text-center"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🛠️ Back-End -->
+    <div class="modal fade" id="modal-back-end" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-dark text-white p-4">
+          <h3 class="mb-4">Certificados - Back-End</h3>
+          <div class="row justify-content-center mb-3">
+            <div class="col-md-3 mb-4">
+              <img src="src/images/miniaturas-e-certificados/dev-web-back/1.png" class="img-thumbnail certificado-thumb"
+                  onclick="mostrarCertificado(this, 'src/images/miniaturas-e-certificados/dev-web-back/1.png', 'src/images/miniaturas-e-certificados/dev-web-back/1-back.png')"
+                  alt="Back-End Certificado 1">
+            </div>
+          </div>
+          <div id="visualizacao-back-end" class="text-center"></div>
+        </div>
+      </div>
+    </div>
+
     <!---------------------------------------------------------------------------------->
 
     <!----VOCÊ PODE ME ENCONTRAR NO WHATSAPP--------------------------------------------------------------------------->   
@@ -1369,7 +1349,7 @@
       </div>
     </footer>
 
-   
+      
       <script src="src/js/jquery.min.js"></script>
       <script src="src/js/jquery-migrate-3.0.1.min.js"></script>
       <script src="src/js/popper.min.js"></script>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste de Certificado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #1a1a1a; color: white; }
+
+    .certificado-thumb {
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .certificado-thumb:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .certificado-flip {
+      position: relative;
+      display: inline-block;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .certificado-flip img {
+      max-height: 80vh;
+      width: 100%;
+      object-fit: contain;
+      transition: opacity 0.6s ease;
+    }
+
+    .verso {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+
+    .certificado-flip.virado .frente { display: none; }
+    .certificado-flip.virado .verso { display: block !important; }
+
+    .modal-backdrop.show {
+      background-color: transparent !important;
+    }
+
+    .modal-content {
+      position: relative;
+      z-index: 1051;
+    }
+
+    #visualizacao-data-science {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5 text-center">
+    <h1>Testador de Certificado</h1>
+    <img src="src/images/miniaturas-e-certificados/1.png"
+         class="img-thumbnail certificado-thumb"
+         alt="Certificado 1"
+         data-bs-toggle="modal"
+         data-bs-target="#modal-data-science">
+    <p class="mt-2 text-white">Clique para abrir</p>
+  </div>
+
+  <!-- Modal Data Science -->
+  <div class="modal fade" id="modal-data-science" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-white p-4">
+        <h3 class="mb-4">Certificado - Data Science</h3>
+        <div class="row justify-content-center mb-3">
+          <div class="col-md-4 mb-4">
+            <img src="src/images/miniaturas-e-certificados/1.png"
+                 class="img-thumbnail certificado-thumb"
+                 alt="Certificado 1"
+                 onclick="mostrarCertificado(this, 'src/images/miniaturas-e-certificados/1.png', 'src/images/miniaturas-e-certificados/1-back.png')">
+            <p class="mt-2">Miniatura</p>
+          </div>
+        </div>
+        <div id="visualizacao-data-science" class="text-center"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+function mostrarCertificado(thumbnail, caminhoFrente, caminhoVerso) {
+  const modal = thumbnail.closest('.modal');
+  const categoria = modal.id.replace('modal-', '');
+  const idVisualizacao = `visualizacao-${categoria}`;
+  const areaVisualizacao = document.getElementById(idVisualizacao);
+
+  if (!areaVisualizacao) {
+    console.error("Área de visualização não encontrada:", idVisualizacao);
+    return;
+  }
+
+  // Limpa visualização antes de inserir
+  areaVisualizacao.innerHTML = '';
+
+  // Cria elementos dinamicamente
+  const container = document.createElement('div');
+  container.className = 'certificado-flip mt-4';
+
+  const frente = document.createElement('img');
+  frente.src = caminhoFrente;
+  frente.className = 'img-fluid frente';
+  frente.alt = 'Frente do Certificado';
+
+  const verso = document.createElement('img');
+  verso.src = caminhoVerso;
+  verso.className = 'img-fluid verso';
+  verso.alt = 'Verso do Certificado';
+
+  // Adiciona imagens no container
+  container.appendChild(frente);
+  container.appendChild(verso);
+
+  // Ativa virada no duplo clique
+  container.addEventListener('dblclick', () => {
+    container.classList.toggle('virado');
+  });
+
+  // Exibe
+  areaVisualizacao.appendChild(container);
+}
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

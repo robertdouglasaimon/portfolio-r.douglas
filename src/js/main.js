@@ -374,13 +374,62 @@ function aplicarEstilos() {
 /*----------------------------------------------------------------------------------------------------------------*/
 
 /* CERTIFICADOS -- 🧠 JavaScript para alternar o botão e mostrar/ocultar --------------------*/
-  const btnToggle = document.getElementById('toggle-certificados');
-  const secaoCompleta = document.getElementById('certificados-completos');
+function mostrarCertificado(thumbnail, caminhoFrente, caminhoVerso) {
+  const modal = thumbnail.closest('.modal');
+  if (!modal) return;
 
-  btnToggle.addEventListener('click', () => {
-    secaoCompleta.classList.toggle('d-none');
-    btnToggle.textContent = secaoCompleta.classList.contains('d-none')
-      ? 'Clique aqui para ver todos'
-      : 'Clique para ocultar';
+  const categoria = modal.id.replace('modal-', '');
+  const idVisualizacao = `visualizacao-${categoria}`;
+  const areaVisualizacao = document.getElementById(idVisualizacao);
+  if (!areaVisualizacao) return;
+
+  areaVisualizacao.style.position = 'relative';
+
+  // Se já tem certificado, vira ao invés de recriar
+  const existente = areaVisualizacao.querySelector('.certificado-flip');
+  if (existente) {
+    existente.classList.toggle('virado');
+    return;
+  }
+
+  // Criação do certificado ampliado
+  const container = document.createElement('div');
+  container.className = 'certificado-flip mt-4';
+
+  const frente = document.createElement('img');
+  frente.src = caminhoFrente;
+  frente.className = 'img-fluid frente';
+  frente.alt = 'Certificado frente';
+
+  const verso = document.createElement('img');
+  verso.src = caminhoVerso;
+  verso.className = 'img-fluid verso';
+  verso.alt = 'Certificado verso';
+
+  container.appendChild(frente);
+  container.appendChild(verso);
+
+  container.addEventListener('dblclick', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.toggle('virado');
   });
-  /*----------------------------------------------------------------------------------------------------------------*/
+
+  // Botão de fechar
+  const fecharBtn = document.createElement('button');
+  fecharBtn.innerHTML = '×';
+  fecharBtn.className = 'fechar-certificado';
+  fecharBtn.onclick = (e) => {
+    e.stopPropagation();
+    container.remove();
+    fecharBtn.remove();
+  };
+
+  areaVisualizacao.innerHTML = ''; // limpa antes de inserir
+  areaVisualizacao.appendChild(container);
+  areaVisualizacao.appendChild(fecharBtn);
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
