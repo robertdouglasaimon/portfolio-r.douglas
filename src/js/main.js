@@ -372,4 +372,80 @@ function aplicarEstilos() {
 	}
 	});
 /*----------------------------------------------------------------------------------------------------------------*/
-  
+
+/* CERTIFICADOS -- 🧠 JavaScript para alternar o botão e mostrar/ocultar --------------------*/
+function mostrarCertificado(thumbnail, caminhoFrente, caminhoVerso) {
+  const modal = thumbnail.closest('.modal');
+  if (!modal) return;
+
+  const categoria = modal.id.replace('modal-', '');
+  const idVisualizacao = `visualizacao-${categoria}`;
+  const areaVisualizacao = document.getElementById(idVisualizacao);
+  if (!areaVisualizacao) return;
+
+  areaVisualizacao.innerHTML = '';
+  areaVisualizacao.style.position = 'relative';
+
+  // 🧠 Extrai a pasta do módulo (ex: data-science/R para Data Science)
+  const partes = caminhoFrente.split('/');
+  const pastaModulo = partes.slice(3, -1).join('/');
+
+  // 📌 Extrai o número do certificado (ex: "1" de "1.png")
+  const nomeImagem = partes.at(-1); // "1.png"
+  const numeroCertificado = nomeImagem.split('.')[0]; // "1"
+
+  // ✅ Corrigido: nome do curso (ex: "R para Data Science")
+  const nomeCurso = partes[4];
+  const nomePDF = `${numeroCertificado}.Curso ${nomeCurso}(doc).pdf`;
+  const caminhoPDF = `src/images/miniaturas-e-certificados/${pastaModulo}/${nomePDF}`;
+
+  // 🔁 Criação do certificado ampliado
+  const container = document.createElement('div');
+  container.className = 'certificado-flip mt-4';
+
+  const frente = document.createElement('img');
+  frente.src = caminhoFrente;
+  frente.className = 'img-fluid frente';
+
+  const verso = document.createElement('img');
+  verso.src = caminhoVerso;
+  verso.className = 'img-fluid verso';
+
+  container.appendChild(frente);
+  container.appendChild(verso);
+
+  container.addEventListener('dblclick', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.toggle('virado');
+  });
+
+  // ❌ Botão de fechar
+  const fecharBtn = document.createElement('button');
+  fecharBtn.innerHTML = '×';
+  fecharBtn.className = 'fechar-certificado';
+  fecharBtn.onclick = (e) => {
+    e.stopPropagation();
+    container.remove();
+    fecharBtn.remove();
+    downloadBtn.remove();
+  };
+
+  // ⬇️ Botão de download do DOC institucional
+  const downloadBtn = document.createElement('a');
+  downloadBtn.href = caminhoPDF;
+  downloadBtn.className = 'download-certificado';
+  downloadBtn.textContent = '⬇️ Baixar Documento Oficial';
+  downloadBtn.setAttribute('download', nomePDF);
+  downloadBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // 📥 Insere tudo no DOM
+  areaVisualizacao.appendChild(container);
+  areaVisualizacao.appendChild(fecharBtn);
+  areaVisualizacao.appendChild(downloadBtn);
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
