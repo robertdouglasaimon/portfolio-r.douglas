@@ -102,7 +102,7 @@ E ainda: **Streamlit**, **Google Colab**, **Canva**, **Figma**, **OBS**, **Photo
 
 ## 📜 Licença  
 Este portfólio está sob a licença **MIT**.  
-Você é livre para usar, modificar e distribuir, desde que mantenha os créditos.  
+Esse portfólio tem mais poder que o Megazord! 🤖 Keep coding, Ranger! 💻✨
 
 ![alt text](image.png)
 
