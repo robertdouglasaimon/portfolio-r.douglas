@@ -52,7 +52,7 @@ E ainda: **Streamlit**, **Google Colab**, **Canva**, **Figma**, **OBS**, **Photo
 - 👤 [Perfil de Mídias Sociais (Frontend Mentor)](https://robertdouglasaimon.github.io/Frontend-Mentor/Desafios/D4/index.html)  
 - 💻 [Projeto Organo (ReactJS - Alura)](https://organo-rdouglas-alura.vercel.app)  
 - ⏳ [Projeto Fokus (Alura)](https://p-fokus.vercel.app)  
-- 📜 [Projeto Cordel (CursoEmVideo)](https://robertdouglasaimon.github.io/PROJETO-CORDEL/)  
+- 📜 [Projeto DS Doces Caseiro (Projeto Profissional)](https://ds-deliciosos-doces-caseiros.vercel.app/#)  
 - 🌐 [Microsite (HTML, CSS e JS)](https://robertdouglasaimon.github.io/projeto-microsite/)  
 
 ### 📊 Data Science  
