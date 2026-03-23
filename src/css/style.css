@@ -197,6 +197,16 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color; }
 
+
+/* EFEITOS NAS FOTOS DA SESSÃO 1 E NA FOTO DE PERFIL-----------------------------------------------------------*/
+.banner img {
+  border-radius: 15px !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+
 /*EFEITO NEON NA FOTO DE PERFIL E NOS ELEMENTOS DO SITE--------------------------------------------------------*/
 .neon-effect {
   width: 200px; /* Tamanho da imagem */
@@ -220,11 +230,9 @@ button:focus {
     0 0 20px #ffc107, 
     0 0 5px #ffc107; /* Aumenta a intensidade do brilho ao passar o mouse */
 }
-
 /*---------------------------------------------------------------------------------------------------------------*
 
 /*EFEITO NEON NA FOTO DO BANNER PERFIL E NOS ELEMENTOS DO SITE-------------------------------------------------*/
-
 .neon-photo-effect {
   display: block; /* Garante que o elemento ocupe apenas o espaço da imagem */
   width: auto; /* Ajuste conforme necessário */
@@ -233,7 +241,7 @@ button:focus {
   filter: drop-shadow(0 0 5px rgba(255, 193, 7, 0.8))
           drop-shadow(0 0 10px rgba(255, 193, 7, 0.6))
           drop-shadow(0 0 20px rgba(255, 193, 7, 0.4));
-  animation: neonPulse 2s infinite; /* Aplica a animação contínua */
+  animation: neonPulse 5s infinite; /* Aplica a animação contínua */
 }
 
 @keyframes neonPulse {
@@ -253,10 +261,9 @@ button:focus {
               drop-shadow(0 0 20px rgba(255, 193, 7, 0.4));
   }
 }
-
 /*-------------------------------------------------------------------------------------------------------------*/
-/*ANIMAÇÃO DE CARREGAMENTO DAS BARRAS DE PROGRESSO DAS HABILIDADES---------------------------------------------*/
 
+/*ANIMAÇÃO DE CARREGAMENTO DAS BARRAS DE PROGRESSO DAS HABILIDADES---------------------------------------------*/
 .progress-bar-loading {
   height: 100%;
   background-color: #4caf50; /* Cor da barra de progresso */
@@ -275,7 +282,6 @@ button:focus {
     width: var(--progress-width, 100%); /* Usa o valor do custom property ou 100% se não definido */
   }
 }
-
 /*-------------------------------------------------------------------------------------------------------------*/
 
 
@@ -9758,3 +9764,4 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
