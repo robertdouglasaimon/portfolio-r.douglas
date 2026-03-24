@@ -199,9 +199,6 @@ button:focus {
 
 
 /* EFEITOS NAS FOTOS DA SESSÃO 1 E NA FOTO DE PERFIL-----------------------------------------------------------*/
-.banner img {
-  border-radius: 15px !important;
-}
 
 
 /*-------------------------------------------------------------------------------------------------------------*/
@@ -219,6 +216,10 @@ button:focus {
     0 0 20px #f8f9fa,    /* Expansão do brilho neon */
     0 0 5px #f8f9fa;    /* Intensidade final do brilho */
   transition: box-shadow 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.neon-effect img {
+  border-radius: 10px; /* Arredondamento das bordas da imagem, opcional */
 }
 
 .neon-effect:hover {
@@ -261,6 +262,8 @@ button:focus {
               drop-shadow(0 0 20px rgba(255, 193, 7, 0.4));
   }
 }
+
+
 /*-------------------------------------------------------------------------------------------------------------*/
 
 /*ANIMAÇÃO DE CARREGAMENTO DAS BARRAS DE PROGRESSO DAS HABILIDADES---------------------------------------------*/
@@ -283,6 +286,16 @@ button:focus {
   }
 }
 /*-------------------------------------------------------------------------------------------------------------*/
+
+/* FOTO DE PERFIL------------------------------------------------------------------------------------------------------*/
+#foto1 {
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
 
 
 input,
@@ -9765,3 +9778,6 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
+.espacamento-div {
+  margin-top: 13.5rem;
+}
