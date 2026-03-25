@@ -293,6 +293,9 @@ button:focus {
   margin-top: 20px;
 }
 
+.espacamento-div {
+  margin-top: 17.5rem;
+}
 
 /*-------------------------------------------------------------------------------------------------------------*/
 
@@ -9778,6 +9781,3 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-.espacamento-div {
-  margin-top: 13.5rem;
-}
